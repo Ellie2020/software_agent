@@ -10,7 +10,7 @@ class Environment(object):
         self._env[4, :3] = 1
         self._env[
             0, 0
-        ] = 2  # 2 represents the _agent that starts at positio 0,0 of the _env
+        ] = 2  # 2 represents the _agent that starts at position 0,0 of the _env
         self._pos_agent = (0, 0)  # Tuple to get track of the _agent position7
 
     def print_env(self):
