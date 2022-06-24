@@ -19,12 +19,10 @@ class Agent(object):
         pass
 
     def learn(self):
-        target = (
-            0  # learn at the end of episode when the agent receives a reward of zero
-        )
+        # learn at the end of episode when the agent receives a reward of zero
+        target = 0
         for prev, reward in reversed(self.state_history):
             self.G[prev] = self.G[prev] + self.alpha * (target - self.G[prev])
             target += reward
-        self.state_history = (
-            []
-        )  # set agent's memory to zero to make room for the next episode
+        # set agent's memory to zero to make room for the next episode
+        self.state_history = []
